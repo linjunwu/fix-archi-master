@@ -1,0 +1,32 @@
+apply from: 'dependencies.gradle'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter{
+			url "http://jcenter.bintray.com/"
+		}
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0-rc1'
+//        classpath "com.android.databinding:dataBinder:1.0-rc2"
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter{
+			url "http://jcenter.bintray.com/"
+		}
+
+    }
+}
+
+ext {
+    androidCompileSdkVersion = 23
+    androidBuildToolsVersion = '23.0.1'
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 23
+}
